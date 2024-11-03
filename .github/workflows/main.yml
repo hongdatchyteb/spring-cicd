@@ -32,6 +32,3 @@ jobs:
 
       - name: Build with Maven
         run: mvn clean install
-
-      - name: Run Application
-        run: mvn spring-boot:run
