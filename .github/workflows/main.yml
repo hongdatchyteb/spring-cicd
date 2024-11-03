@@ -35,7 +35,7 @@ jobs:
 
 #      - name: Run Application
 #        run: mvn spring-boot:run
-      - name: Run Application
+      - name: Stop Existing Application
         run: |
           # Dừng tiến trình cũ nếu đang chạy trên cổng 8083
           PID=$(lsof -ti:8083 || true)
@@ -45,4 +45,6 @@ jobs:
           fi
           
           # Khởi động ứng dụng mới ở chế độ nền
-          nohup java -jar target/SimpleSpring-0.0.1-SNAPSHOT.jar > app.log 2>&1 &
+
+      - name: Run Application
+        run: nohup java -jar target/SimpleSpring-0.0.1-SNAPSHOT.jar > app.log 2>&1 &
