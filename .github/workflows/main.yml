@@ -37,7 +37,7 @@ jobs:
 #        run: mvn spring-boot:run
       - name: Run Application
         run: |
-          cd /home/hongdatchy/simple_spring
+#          cd /home/hongdatchy/simple_spring
           
           # Dừng tiến trình cũ nếu đang chạy trên cổng 8083
           PID=$(lsof -ti:8083 || true)
