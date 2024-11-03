@@ -44,4 +44,4 @@ jobs:
             kill -9 $PID
           fi
       - name: Run Application
-        run: nohup mvn spring-boot:run &
+        run: nohup mvn spring-boot:run > app.log 2>&1 &
