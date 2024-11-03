@@ -43,8 +43,5 @@ jobs:
             echo "Dừng tiến trình cũ với PID $PID"
             kill -9 $PID
           fi
-          
-          # Khởi động ứng dụng mới ở chế độ nền
-
       - name: Run Application
-        run: nohup java -jar target/SimpleSpring-0.0.1-SNAPSHOT.jar > app.log 2>&1 &
+        run: nohup mvn spring-boot:run &
